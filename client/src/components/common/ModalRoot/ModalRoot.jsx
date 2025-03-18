@@ -13,7 +13,8 @@ import {
     SignupModal,
     ActionModal,
     VerificationModal,
-    EditUsernameModal
+    EditUsernameModal,
+    ChatSearchModal
 } from "../../../components/modals/";
 
 
@@ -27,7 +28,8 @@ const MODAL_COMPONENTS = {
     'RegisterModal': (props) => <SignupModal {...props} />,
     'ActionModal': (props) => <ActionModal {...props} />,
     'VerificationModal': (props) => <VerificationModal {...props} />,
-    'EditUsernameModal': (props) => <EditUsernameModal {...props} />
+    'EditUsernameModal': (props) => <EditUsernameModal {...props} />,
+    'ChatSearchModal': (props) => <ChatSearchModal {...props} />
 }
 
 const ModalRoot = () => {

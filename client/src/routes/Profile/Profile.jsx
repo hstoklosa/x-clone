@@ -63,21 +63,13 @@ const Profile = () => {
         }),
     });
 
-    const createdAt = formatDate(profileUser?.createdAt, {
-        year: "numeric",
-        month: "long",
-    });
+    const createdAt = formatDate(profileUser?.createdAt, { year: "numeric", month: "long" });
     const isFollowed = !isCurrentUser && profileUser?.followers.includes(currentUser.id);
-
-    // if (!isProfileLoading && profileUser?.username === username) {
-    //     return <></>
-    // }
 
     return (
         <main>
             <MiddleColumn className="profile-route">
                 {!isProfileLoading ? (
-                    // profileUser ? (
                     <>
                         <Helmet>
                             {profileUser ? (
