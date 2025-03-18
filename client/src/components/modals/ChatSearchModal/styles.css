@@ -1,0 +1,22 @@
+.chatsearch-modal_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.chatsearch-modal_heading {
+    font-size: 1.3rem;
+}
+
+.chatsearch-modal_header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.chatsearch-modal_header .header-container .create-chat_btn {
+    width: auto;
+    padding: 0.4rem 1rem;
+}

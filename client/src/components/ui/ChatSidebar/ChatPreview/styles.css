@@ -1,0 +1,91 @@
+.chat-preview {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.1s ease-in-out;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.chat-preview:hover,
+.chat-preview:active {
+    background-color: var(--chat-hover);
+}
+
+.chat-preview .pfp-container {
+    width: 45px !important;
+    height: 45px !important;
+    margin-right: 0.75rem;
+}
+
+.chat-preview .pfp-container img {
+    height: auto;
+}
+
+.chat-preview__info {
+    width: 100%;
+}
+
+.chat-preview__info__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    width: 100%;
+}
+
+.chat-preview_user {
+    display: flex;
+}
+
+.chat-preview__info__top .displayName {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.chat-preview__info__top .username {
+    font-size: 1rem;
+}
+
+.chat-preview_buttons {
+    margin-left: 0;
+}
+
+.chat-preview__info__bottom .lastMessage {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--grey);
+    width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.chat-preview.active {
+    background-color: var(--active-chat);
+    border-right: 2px solid var(--primary-colour);
+}
+
+.chat-preview.active .chat-preview__info__bottom .lastMessage {
+    color: var(--white);
+}
+
+.chat-preview.active:hover,
+.chat-preview.active:active {
+    background-color: var(--chat-hover);
+}
+
+/* ---- */
+
+/* .chat-preview.active {
+    background-color: var(--search-background);
+    border-right: 2px solid var(--primary-colour);
+}
+
+.chat-preview.active .chat-preview__info__bottom .lastMessage {
+    color: var(--white);
+}
+
+.chat-preview.active:hover,
+.chat-preview.active:hover {
+    background-color: var(--accent-hover);
+} */

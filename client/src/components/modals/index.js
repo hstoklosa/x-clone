@@ -8,3 +8,4 @@ export { default as DisplayModal } from "./DisplayModal";
 export { default as MediaModal } from "./MediaModal";
 export { default as EditUsernameModal } from "./EditUsernameModal";
 export { default as ActionModal } from "./ActionModal";
+export { default as ChatSearchModal } from "./ChatSearchModal";

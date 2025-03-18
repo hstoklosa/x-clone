@@ -84,6 +84,8 @@
     --bg-values: 255, 255, 255;
     --search-background: rgb(239, 243, 244);
     --sidebar-background: rgb(247, 249, 249);
+    --active-chat: rgb(239, 243, 244);
+    --chat-hover: rgb(247, 249, 249);
 
     --grey: rgb(83, 100, 113);
     --grey-2: rgba(0, 0, 0, 0.6);
@@ -102,6 +104,8 @@
     --bg-values: 0, 0, 0;
     --search-background: rgb(32, 35, 39);
     --sidebar-background: rgb(22, 24, 28);
+    --active-chat: rgb(32, 35, 39);
+    --chat-hover: rgb(22, 24, 28);
 
     --grey: rgb(113, 118, 123);
     --grey-2: rgba(91, 112, 131, 0.8);
@@ -120,6 +124,8 @@
     --bg-values: 22, 33, 44;
     --search-background: rgb(39, 51, 64);
     --sidebar-background: rgb(30, 39, 50);
+    --active-chat: rgb(39, 51, 64);
+    --chat-hover: rgb(30, 39, 50);
 
     --grey: rgb(139, 152, 165);
     --grey-2: rgba(91, 112, 131, 0.8);

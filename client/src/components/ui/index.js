@@ -11,3 +11,6 @@ export { default as UserPreview } from "./UserPreview";
 export { default as SearchBar } from "./SearchBar";
 export { default as TabPanel } from "./TabPanel";
 export { default as TweetContent } from "./TweetContent";
+export { default as Chat } from "./Chat";
+export { default as TypingIndicator } from "./Chat/TypingIndicator";
+export { default as ChatSidebar } from "./ChatSidebar";

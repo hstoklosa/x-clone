@@ -152,7 +152,6 @@ const Sidebar = () => {
                                 </>
                             )}
                             state={{ previousPath: pathname }}
-                            disabled
                         />
 
                         <NavLink

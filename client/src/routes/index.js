@@ -13,9 +13,10 @@ import Bookmarks from "./Bookmarks";
 import Explore from "./Explore";
 import ExploreTabList from "./Explore/ExploreTabList";
 import Search from "./Search";
+import Messages from "./Messages";
+import { Chat } from "../components";
 
 import PublicRoute from "./PublicRoute";
-
 
 const router = createBrowserRouter([
     {
@@ -103,6 +104,18 @@ const router = createBrowserRouter([
                             })),
                         ],
                     },
+                    {
+                        path: "/messages",
+                        element: <Messages />,
+                        children: [
+                            { path: "" },
+                            {
+                                path: "/messages/:participantIds",
+                                element: <Chat />,
+                            },
+                        ],
+                    },
+
                 ]
             },
             {

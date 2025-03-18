@@ -12,5 +12,6 @@ router.use("/api/uploads", express.static(path.join(__dirname, '../uploads')));
 router.use("/api/auth", authRoute);
 router.use("/api/users", userRoute);
 router.use("/api/tweets", tweetRoute);
+router.use("/api/chat", chatRoute);
 
 module.exports = router;

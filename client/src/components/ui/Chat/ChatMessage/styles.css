@@ -1,0 +1,125 @@
+.chat-message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.2rem 0;
+    width: 100%;
+    flex-grow: 1rem;
+}
+
+.chat-message.sent {
+    flex-direction: row-reverse;
+}
+
+.chat-message__buttons {
+    display: flex;
+    opacity: 0;
+}
+
+.chat-message:hover .chat-message__buttons,
+.chat-message:active .chat-message__buttons {
+    opacity: 1;
+}
+
+.chat-message.sent .chat-message__buttons button {
+    margin-left: 1rem;
+}
+
+.chat-message.received .chat-message__buttons button {
+    margin-right: 1rem;
+}
+
+.chat-message__buttons .message-more .icon {
+    color: #343c42 !important;
+}
+
+/* 
+*
+*    Some of the code came from the source below, 
+*    however I have modified it to fit my needs. 
+*
+*    REF: https://stackoverflow.com/a/71155446/13910414 
+*
+*/
+
+.chat-message__bubble {
+    --rad: 20px;
+    --rad-sm: 3px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+
+    padding: 0.75rem 1.25rem;
+    /* border-radius: 99rem; */
+    cursor: pointer;
+}
+
+.chat-message__bubble.sent {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background-color: var(--primary-colour);
+    justify-self: flex-end;
+    transition: background-color 0.2s;
+    margin-left: 1rem;
+}
+
+.chat-message__bubble.sent:hover,
+.chat-message__bubble.sent:active {
+    background-color: var(--primary-colour);
+}
+
+.chat-message__bubble.received {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background-color: var(--input-disabled);
+    /* align-self: flex-start; */
+    margin-right: 1rem;
+}
+
+/* Improve radius for messages group */
+
+.chat-message.sent:first-child .chat-message__bubble,
+.chat-message.received + .chat-message.sent .chat-message__bubble {
+    border-top-right-radius: var(--rad);
+}
+
+.chat-message.received:first-child .chat-message__bubble,
+.chat-message.sent + .chat-message.received .chat-message__bubble {
+    border-top-left-radius: var(--rad);
+}
+
+/* Time & sent/received label */
+
+.chat-message__bubble::before {
+    content: attr(data-time);
+    font-size: 0.8rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 0.5rem;
+    color: #888;
+    white-space: nowrap;
+    display: none;
+}
+
+.chat-message__bubble.sent::before {
+    right: 5px;
+}
+
+.chat-message__bubble.received::before {
+    left: 5px;
+}
+
+/* Show time only for first message in group */
+
+.chat-message:first-child .chat-message__bubble::before,
+.chat-message.sent + .chat-message.received .chat-message__bubble::before,
+.chat-message.received + .chat-message.sent .chat-message__bubble::before {
+    /* Show only for first message in group */
+    display: block;
+}
+
+/* Rest */
+
+.chat-message__text {
+    font-size: 0.938rem;
+    font-weight: 600;
+}
